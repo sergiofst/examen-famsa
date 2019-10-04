@@ -1,0 +1,33 @@
+<h2>Pendientes</h2>
+<div>
+    <a class="btn btn-default pull-right" ui-sref="tasks.new">
+        Nuevo
+    </a>
+</div>
+<table class="table able-striped">
+    <thead>
+        <th>Titulo</th>
+        <th>&nbsp;</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="task in vm.tasks track by task.id">
+            <td>
+                <strong>{{ task.title }}</strong>
+                <br />
+                {{ task.description }}
+            </td>
+            <td align="right">
+                <a class="btn btn-link" ui-sref="tasks.edit({ taskId: task.id  })">
+                    Editar
+                </a>
+                <a class="btn btn-link" ui-sref="tasks.delete({ taskId: task.id  })">
+                    Eliminar
+                </a>
+            </td>
+        </tr>
+
+    </tbody>
+    <tfoot>
+        <td colspan="2" align="right">Total: {{ vm.tasks.length }}</td>
+    </tfoot>
+</table>

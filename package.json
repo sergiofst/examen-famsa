@@ -1,0 +1,15 @@
+{
+  "name": "examen",
+  "version": "1.0.0",
+  "description": "",
+  "cacheDirectories": [
+    "node_modules",
+    "src/main/webapp/bower_components"
+  ],
+  "devDependencies": {
+    "bower": "1.7.9"
+  },
+  "engines": {
+    "node": "^8.16"
+  }
+}
